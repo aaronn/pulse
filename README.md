@@ -5,4 +5,5 @@ My first node project-- just familiarizing myself with Express / Socket.io. Clic
 
 Click more than once to string pulses together.
 
+## Contact
 [Twitter](http://twitter.com/aaronykng "Twitter").
