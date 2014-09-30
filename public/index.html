@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="/javascripts/matrix.js"></script>
+		<link rel="stylesheet" href="stylesheets/style.css"/>
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+
+		<!--OpenGraph-->
+		<meta property="og:title" content="Send pulses around the world."/>
+		<meta property="og:description" content="Click to send a pulse and see who responds. An experiment by Aaron Ng."/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:image" content="/images/thumb.png"/>
+
+		<!--Twitter Cards-->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@aaronykng">
+		<meta name="twitter:creator" content="@aaronykng">
+		<meta name="twitter:title" content="Pulse">
+		<meta name="twitter:description" content="Click anywhere to send pulses around the world.">
+		<meta name="twitter:image:src" content="/images/favicon.png">
+	</head>
+	<body>
+			<div class='wrapper'>
+				<h1>Click anywhere to send a <span class='colored'>pulse</span>.</h1>
+				<h2>There are 0 people online.</h2>
+				<div class="push"></div>
+			</div>
+			<footer>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-via="aaronykng">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				<h3>An experiment by <a href='http://www.twitter.com/aaronykng/'>Aaron Ng</a>.<br><a href='#'>View on Github</a></h3>
+			</footer>
+	</body>
+</html>

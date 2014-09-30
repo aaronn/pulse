@@ -1,0 +1,9 @@
+{
+  "name": "matrix-basic",
+  "description": "see people click their screens, all around the world.",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.9.5",
+    "socket.io": "^1.1.0"
+  }
+}

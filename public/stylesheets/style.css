@@ -1,0 +1,172 @@
+/*
+By Aaron Ng in 2014
+http://aaron.ng;
+http://www.twitter.com/aaronykng;
+
+Do whatever you want with these files, would be nice if you linked back to me or let me know though!
+*/
+
+.line {
+    height: 2px;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    -ms-transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+}
+
+.line-fill {
+    height: 0px;
+    width: 10px;
+    position: absolute;
+    background-color: white;
+}
+
+.circle {
+    opacity: 0;
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+html, body {
+    height: 94%;
+}
+
+body {
+    text-align: center;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+h1 {
+    margin-top: 50px;
+    color: #000;
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 17px;
+    color: #000;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.pulse {
+    background: transparent;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    height: 40px;
+    width: 40px;
+    -webkit-animation: pulse 1s ease-out;
+    -moz-animation: pulse 1s ease-out;
+    animation: pulse 1s ease-out;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    position: absolute;
+    margin-top: -12px;
+    margin-left: -12px;
+    z-index: 1;
+    opacity: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+}
+
+footer, .push {
+    height: 60px;
+}
+
+h3 {
+    font-size: 16px;
+    color: #CCC;
+    font-weight: 300;
+    line-height:24px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #CCC;
+    font-weight: 300;
+    display:inline-block;
+}
+
+.twitter-share-button{
+    margin-left:30px;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+@-moz-keyframes pulse {
+    0% {
+        -moz-transform: scale(0);
+        transform: scale(0);
+        opacity: 0.0;
+    }
+
+    25% {
+        -moz-transform: scale(0);
+        transform: scale(0);
+        opacity: 0.1;
+    }
+
+    50% {
+        -moz-transform: scale(0.1);
+        transform: scale(0.1);
+        opacity: 0.3;
+    }
+
+    75% {
+        -moz-transform: scale(0.5);
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.0;
+    }
+}
+
+@-webkit-keyframes "pulse" {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0.0;
+    }
+
+    25% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0.1;
+    }
+
+    50% {
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+        opacity: 0.3;
+    }
+
+    75% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.0;
+    }
+}
