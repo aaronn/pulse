@@ -20,6 +20,21 @@ io.on('connection', function(socket){
 	io.emit('users', connectedUsers);
 	socket.on('click', function(obj){
 		console.log("User " + obj.userID + " clicked the canvas at x:" + obj.x + ", y:" + obj.y + " color: " + obj.color + " and an ID of:" + obj.uniqueTimestamp);
+
+		// Verify ALL values or risk random injections.
+		if (hexToRgb(obj.color) === null){
+			return;
+		}
+		if (new Date(obj.uniqueTimestamp) === "Invalid Date"){
+			return;
+		}
+		if (obj.userID.length > 5){
+			return;
+		}
+		if (isNaN(obj.x) || isNaN(obj.y)){
+			return;
+		}
+		
 		io.emit('click', obj);
 	});
 	socket.on('disconnect', function(){
@@ -32,3 +47,14 @@ io.on('connection', function(socket){
 http.listen(app.get('port'), function(){
 	console.log('listening on port ' + app.get('port'));
 });
+
+/* These mostly exist to check againsat injections */
+
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
