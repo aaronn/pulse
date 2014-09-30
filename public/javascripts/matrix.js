@@ -30,7 +30,7 @@ $(document).ready(function() {
     });
 
     /* Or on Tap...*/
-    document.addEventListener('touchmove', function(e) {
+    document.addEventListener('touchend', function(e) {
         e.preventDefault();
         var touch = e.touches[0];
         var x = touch.pageX;
@@ -46,7 +46,7 @@ $(document).ready(function() {
             'uniqueTimestamp': uniqueTimestamp,
             'color': randomColor
         });
-        
+
     }, false);
 
     // On receive
