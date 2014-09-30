@@ -30,7 +30,7 @@ $(document).ready(function() {
     });
 
     /* Or on Tap...*/
-    document.addEventListener('touchend', function(e) {
+    document.addEventListener('touchstart', function(e) {
         e.preventDefault();
         var touch = e.touches[0];
         var x = touch.pageX;
