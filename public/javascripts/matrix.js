@@ -29,6 +29,26 @@ $(document).ready(function() {
         });
     });
 
+    /* Or on Tap...*/
+    document.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+        var touch = e.touches[0];
+        var x = touch.pageX;
+        var y = touch.pageY;
+
+        var uniqueTimestamp = (new Date).getTime();
+
+        //Emit!
+        socket.emit('click', {
+            'userID': currentUserID,
+            'x': x,
+            'y': y,
+            'uniqueTimestamp': uniqueTimestamp,
+            'color': randomColor
+        });
+        
+    }, false);
+
     // On receive
     socket.on('click', function(obj) {
         addCircle(obj.userID, obj.x, obj.y, obj.uniqueTimestamp, obj.color);
