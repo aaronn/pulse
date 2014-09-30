@@ -21,11 +21,11 @@ $(document).ready(function() {
 
         //Emit!
         socket.emit('click', {
-            "userID": currentUserID,
-            "x": x,
-            "y": y,
-            "uniqueTimestamp": uniqueTimestamp,
-            "color": randomColor
+            'userID': currentUserID,
+            'x': x,
+            'y': y,
+            'uniqueTimestamp': uniqueTimestamp,
+            'color': randomColor
         });
     });
 
