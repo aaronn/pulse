@@ -132,7 +132,7 @@ $(document).ready(function() {
         var line = $("#l-" + uniqueTimestamp + "-" + userID);
         line.animate({
             width: c
-        }, 10, function() {});
+        }, 250, function() {});
     }
 
     function triggerPulse(uniqueTimestamp, userID) {
