@@ -5,5 +5,7 @@ Basically my "Hello World" project for node. Familiarizing myself with Express /
 
 Click more than once to string pulses together.
 
+[View the project here.](http://globalpulse.herokuapp.com "View the project here.")
+
 ## Contact
 [Twitter](http://twitter.com/aaronykng "Twitter").
