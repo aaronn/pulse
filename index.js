@@ -25,7 +25,7 @@ io.on('connection', function(socket){
 		if (hexToRgb(obj.color) === null){
 			return;
 		}
-		if (new Date(obj.uniqueTimestamp) === "Invalid Date"){
+		if (isNaN(obj.uniqueTimestamp)){
 			return;
 		}
 		if (obj.userID.length > 5){
